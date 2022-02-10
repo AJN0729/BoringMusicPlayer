@@ -14,14 +14,14 @@ class MainActivity : AppCompatActivity() {
     var mMediaPlayer: MediaPlayer? = null
     fun playSound(view: View) {
         if (mMediaPlayer == null) {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.song1)
+            mMediaPlayer = MediaPlayer.create(this, R.raw.bell)
             mMediaPlayer!!.isLooping = true
             mMediaPlayer!!.start()
         } else mMediaPlayer!!.start()
     }
 
     fun pauseSound(view: View) {
-        if (mMediaPlayer != null && mMediaPlayer!!.isPlaying){
+        if (mMediaPlayer != null && mMediaPlayer!!.isPlaying) {
             mMediaPlayer!!.pause()
         }
     }
